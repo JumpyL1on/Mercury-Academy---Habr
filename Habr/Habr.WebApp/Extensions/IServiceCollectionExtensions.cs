@@ -15,7 +15,7 @@ using Hangfire;
 
 namespace Habr.WebApp.Extensions
 {
-    public static class ServiceCollectionExtensions
+    public static class IServiceCollectionExtensions
     {
         public static IServiceCollection AddServices(this IServiceCollection services)
         {

@@ -37,11 +37,11 @@ webApplicationBuilder.Services.AddAPIVersioning();
 
 webApplicationBuilder.Services.AddSwagger();
 
-webApplicationBuilder.Services.AddHangfire(webApplicationBuilder.Configuration);
+//webApplicationBuilder.Services.AddHangfire(webApplicationBuilder.Configuration);
 
 var webApplication = webApplicationBuilder.Build();
 
-webApplication.AddRecurringJob(webApplicationBuilder.Configuration);
+//webApplication.AddRecurringJob(webApplicationBuilder.Configuration);
 
 if (webApplication.Environment.IsDevelopment())
 {
@@ -58,7 +58,7 @@ webApplication.UseAuthorization();
 
 webApplication.MapControllers();
 
-webApplication.UseHangfireDashboard();
+//webApplication.UseHangfireDashboard();
 
 webApplication.Run();
 
